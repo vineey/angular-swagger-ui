@@ -179,8 +179,8 @@ angular
 						//TODO manage 'deprecated' operations ?
 						operation.id = operationId;
 						form[operationId] = {
-							contentType: operation.consumes && operation.consumes.length === 1 ? operation.consumes[0] : 'application/json',
-							responseType: 'application/json'
+							contentType: operation.consumes && operation.consumes.length >= 1 ? operation.consumes[0] : 'application/json',
+							responseType: operation.produces && operation.produces.length >= 1 ? operation.produces[0] : 'application/json'
 						};
 						operation.httpMethod = httpMethod;
 						operation.path = path;
@@ -204,7 +204,7 @@ angular
 								param.schema.model = $sce.trustAsHtml(swaggerModel.generateModel(swagger, param.schema));
 							}
 							if (param.in === 'body') {
-								operation.consumes = operation.consumes || ['application/json'];
+								operation.consumes = operation.consumes || ['application/xml', 'application/json'];
 							}
 							if (param.$ref) {
 								// parameter reference
