@@ -1,5 +1,10 @@
 ###CHANGELOG
 
+##### 0.1.71 xmlify
+
++ use node v12 and up
++ use the first item in operation.consume and produce as the default content-type and response-type respectivel
+
 ##### 0.1.7  chromatic-adornment
 
 + add support for application/xml response type with formatted response body
