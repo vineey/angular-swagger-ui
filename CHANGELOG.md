@@ -3,7 +3,7 @@
 ##### 0.1.71 xmlify
 
 + use node v12 and up
-+ use the first item in operation.consume and produce as the default content-type and response-type respectivel
++ use the first item in operation.consume and produce as the default content-type and response-type respectively
 
 ##### 0.1.7  chromatic-adornment
 
